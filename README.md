@@ -1,38 +1,80 @@
-Diretrizes do desafio
-===========================
+<p align="center">
+  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
+</p>
 
-Por favor organize, design, teste, faça a documentação e deploy do seu código da forma como se ele fosse para produção, depois nos envie um link do repositório no Github.
 
-Tarefa (funcional)
----------------
 
-1. Desenvolva um sistema de autenticação JWT.
-2. Você deve construir uma CRUD de um catálogo de filmes. Todos os endpoints dessa CRUD só devem ser consumidos por um usuário autenticado.
+## Description
+A backend project for a movie catalog using NestJS, TypeScript, Docker, Redis, Swagger, Jest, ESLint, Prettier, Husky, Lint-staged, TypeORM, and PostgreSQL.
 
-Ferramentas requeridas
----------------
+## Table of Contents
 
-1. TypeScript
-2. Nest.js
-3. TypeORM
-4. Swagger
-5. Docker
-6. Redis
-7. PostgreSQL
+- [Overview](#overview)
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [API Documentation](#api-documentation)
+- [Contributing](#contributing)
+- [License](#license)
 
-Aspectos técnicos
----------------
+## Overview
 
-A arquitetura deve ser composta de uma aplicação provendo uma API RESTful em JSON, utilize do Redis como seu cache.
+This project is a backend for a movie catalog that allows users to register, authenticate, search for movies, and save their favorite movies. It is developed using the NestJS framework with TypeScript and several other tools to ensure code quality and scalability.
 
-OBS: Lembre-se de validar a informação tratada em cada endpoint.
+## Installation
 
-Back-end
----------------
+To install and run the project locally, follow the steps below:
 
-Engenharia de qualidade é saber utilizar da ferramenta certa para o trabalho certo, e seguir aprendendo constantemente sobre ela. Sabendo disso, sinta-se livre para mencionar no `README` quanto tempo de experiência você possui com cada uma delas, fazendo isso levaremos em consideração ao avaliar seu desafio. 
+### Prerequisites
 
-Faça o deploy!
----------------
+- Node.js (version 20 or higher)
+- NPM or Yarn
+- Docker and Docker Compose
 
-Ao finalizar, faça o deploy no lugar que te for mais confortável (exemplo: Amazon EC2, Heroku, Netlify, Google AppEngine, etc)
+
+### Steps
+1. Clone the repository:
+ ```bash
+   git clone https://github.com/your-username/mks-backend.git
+   cd mks-backend 
+   ```
+2. Install the dependencies:
+```bash
+$ npm install
+```
+
+3. Create a '.env' file (use the .env-example to see which variables need be created):
+```
+ cp .env.example .env
+```
+
+4. Running the app:
+
+```bash
+# running docker
+$ docker compose up -d
+
+# up the migrations
+$ npm run migrate:up
+
+# development
+$ npm run dev
+```
+
+## API Documentation
+The API documentation is available via Swagger. After running the application, access:
+```
+http://localhost:3000/doc
+```
+
+## Contributing
+
+Contributions are welcome! To contribute, follow these steps:
+
+Fork the project.
+Create a branch for your feature (git checkout -b feature/new-feature).
+Commit your changes (git commit -am 'Add new feature').
+Push to the branch (git push origin feature/new-feature).
+Create a new Pull Request.
+
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
