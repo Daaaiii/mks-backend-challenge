@@ -33,8 +33,12 @@ To install and run the project locally, follow the steps below:
 
 ### Steps
 1. Clone the repository:
+
+! The project is using git submodules, therefore need use the "--recurse-submodules"
+
  ```bash
-   git clone https://github.com/your-username/mks-backend.git
+    git clone --recurse-submodules https://github.com/Daaaiii/mks-backend-challenge.git
+
    cd mks-backend 
    ```
 2. Install the dependencies:
@@ -50,13 +54,13 @@ $ npm install
 4. Running the app:
 
 ```bash
-# running docker
+# Running docker
 $ docker compose up -d
 
-# up the migrations
+# Applying migrations
 $ npm run migrate:up
 
-# development
+# Development mode
 $ npm run dev
 ```
 
@@ -65,7 +69,7 @@ The API documentation is available via Swagger. After running the application, a
 ```
 http://localhost:3000/doc
 ```
-
+![alt text](swagger.gif)
 ## Contributing
 
 Contributions are welcome! To contribute, follow these steps:
